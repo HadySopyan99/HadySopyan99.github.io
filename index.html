@@ -2,93 +2,160 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Hady Sopyan - Profil Pribadi</title>
+  <title>Hady Sopyan | Profil Resmi</title>
 
   <!-- SEO -->
-  <meta name="description" content="Profil Hady Sopyan, pelajar dari Yayasan SMK Sentosa. Informasi pribadi, minat, dan kontak.">
-  <meta name="keywords" content="Hady Sopyan, Profil Hady Sopyan, Hady Sopyan SMK Sentosa">
+  <meta name="description" content="Website resmi Hady Sopyan, pelajar SMK Sentosa. Profil pribadi, latar belakang, dan kontak.">
+  <meta name="keywords" content="Hady Sopyan, Hady Sopyan SMK Sentosa, Profil Hady Sopyan">
   <meta name="author" content="Hady Sopyan">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google indexing -->
+  <meta name="robots" content="index, follow">
+
+
+  <!-- Style -->
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f5f6fa;
       color: #333;
     }
 
+    header {
+      background: linear-gradient(135deg, #1e272e, #485460);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
     nav {
-      background-color: #222;
+      background: #1e272e;
       padding: 15px;
       text-align: center;
+      position: sticky;
+      top: 0;
     }
 
     nav a {
       color: white;
       margin: 0 15px;
+
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+      font-weight: 600;
     }
 
     nav a:hover {
       text-decoration: underline;
-      color: #00bcd4;
     }
 
     section {
-      padding: 40px;
       max-width: 900px;
-      margin: 20px auto;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: auto;
+      padding: 60px 20px;
     }
 
-    h1, h2 {
-      color: #222;
+    h2 {
+      color: #1e272e;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     }
 
     footer {
+      background: #1e272e;
+      color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      color: #777;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 14px;
     }
+
+    a.email {
+      color: #1e90ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.email:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 
 <body>
 
+  <header id="home">
+    <h1>Hady Sopyan</h1>
+    <p>Pelajar | Website Profil Pribadi Resmi</p>
+  </header>
+
   <nav>
-    <a href="#home">Home</a>
     <a href="#about">Tentang</a>
+    <a href="#profile">Profil</a>
     <a href="#contact">Kontak</a>
   </nav>
 
-  <section id="home">
-    <h1>Hady Sopyan</h1>
-    <p>Selamat datang di website pribadi Hady Sopyan.</p>
+  <section id="about">
+    <div class="card">
+      <h2>Tentang Website</h2>
+      <p>
+        Website ini merupakan halaman profil 
+
+resmi milik <strong>Hady Sopyan</strong>.
+        Dibuat sebagai media informasi pribadi dan identitas digital di internet.
+      </p>
+    </div>
   </section>
 
-  <section id="about">
-    <h2>Tentang Saya</h2>
-    <p>
-      Hady Sopyan adalah seorang pelajar dari Yayasan SMK Sentosa.
-      Dikenal sebagai pribadi yang tenang dan reflektif.
-      Meskipun cenderung introvert, Hady menjunjung tinggi nilai toleransi
-      serta menghargai perbedaan agama, ras, dan budaya.
-    </p>
+  <section id="profile">
+    <div class="card">
+      <h2>Profil Pribadi</h2>
+      <p>
+        Hady Sopyan adalah seorang pelajar dari Yayasan SMK Sentosa.
+        Dikenal sebagai pribadi yang tenang, reflektif, dan menjunjung tinggi
+        nilai toleransi serta menghargai perbedaan agama, ras, dan budaya
+        dalam kehidupan sosial.
+      </p>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Kontak</h2>
-    <p>Email: <a href="mailto:hadysopyan99@gmail.com">hadysopyan99@gmail.com</a></p>
+    <div class="card">
+      <h2>Kontak</h2>
+      <p>
+        Email: <a class="email" href="mailto:hadysopyan99@gmail.com">
+        hadysopyan99@gmail.com</a>
+      </p>
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 Hady Sopyan</p>
+    <p>© 2026 Hady Sopyan | Semua Hak Dilindungi</p>
   </footer>
 
 </body>

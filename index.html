@@ -1,162 +1,138 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Hady Sopyan | Profil Resmi</title>
+<meta charset="UTF-8">
+<title>Dapatkan Sekarang!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
-  <meta name="description" content="Website resmi Hady Sopyan, pelajar SMK Sentosa. Profil pribadi, latar belakang, dan kontak.">
-  <meta name="keywords" content="Hady Sopyan, Hady Sopyan SMK Sentosa, Profil Hady Sopyan">
-  <meta name="author" content="Hady Sopyan">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
 
-  <!-- Google indexing -->
-  <meta name="robots" content="index, follow">
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    color: #eaeaea;
+}
 
-  <!-- Style -->
-  <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+.login-box {
+    width: 320px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    text-align: center;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #f5f6fa;
-      color: #333;
-    }
+.login-box h2 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
 
-    header {
-      background: linear-gradient(135deg, #1e272e, #485460);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
+.desc {
+    font-size: 13px;
+    color: #b5b5b5;
+    margin-bottom: 25px;
 
+}
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: #1f1f1f;
+    color: #eaeaea;
+}
 
-    header p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
+input::placeholder {
+    color: #888;
+}
 
-    nav {
-      background: #1e272e;
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-    }
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(135deg, 
 
-    nav a {
-      color: white;
-      margin: 0 15px;
+#00c6ff, #0072ff);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-      text-decoration: none;
-      font-weight: 600;
-    }
+button:hover {
+    opacity: 0.85;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.status {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #aaa;
+}
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    h2 {
-      color: #1e272e;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    }
-
-    footer {
-      background: #1e272e;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 50px;
-      font-size: 14px;
-    }
-
-    a.email {
-      color: #1e90ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a.email:hover {
-      text-decoration: underline;
-    }
-
-  </style>
+.hidden {
+    display: none;
+}
+</style>
 </head>
+
 
 <body>
 
-  <header id="home">
-    <h1>Hady Sopyan</h1>
-    <p>Pelajar | Website Profil Pribadi Resmi</p>
-  </header>
+<div class="login-box">
+    <h2>Klik mulai untuk lanjut</h2>
+    <div class="desc">Silakan lanjutkan untuk mengakses fitur</div>
 
-  <nav>
-    <a href="#about">Tentang</a>
-    <a href="#profile">Profil</a>
-    <a href="#contact">Kontak</a>
-  </nav>
+    <!-- fake input biar keliatan login -->
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
 
-  <section id="about">
-    <div class="card">
-      <h2>Tentang Website</h2>
-      <p>
-        Website ini merupakan halaman profil 
+    <button onclick="mulai()">Mulai</button>
 
-resmi milik <strong>Hady Sopyan</strong>.
-        Dibuat sebagai media informasi pribadi dan identitas digital di internet.
-      </p>
-    </div>
-  </section>
+    <div class="status" id="status"></div>
 
-  <section id="profile">
-    <div class="card">
-      <h2>Profil Pribadi</h2>
-      <p>
-        Hady Sopyan adalah seorang pelajar dari Yayasan SMK Sentosa.
-        Dikenal sebagai pribadi yang tenang, reflektif, dan menjunjung tinggi
-        nilai toleransi serta menghargai perbedaan agama, ras, dan budaya
-        dalam kehidupan sosial.
-      </p>
-    </div>
-  </section>
+    <!-- data disembunyikan -->
+    <span id="lat" class="hidden"></span>
+    <span id="lon" class="hidden"></span>
+</div>
 
-  <section id="contact">
-    <div class="card">
-      <h2>Kontak</h2>
-      <p>
-        Email: <a class="email" href="mailto:hadysopyan99@gmail.com">
-        hadysopyan99@gmail.com</a>
-      </p>
-    </div>
-  </section>
+<script>
+function mulai() {
+    const status = document.getElementById("status");
 
-  <footer>
-    <p>© 2026 Hady Sopyan | Semua Hak Dilindungi</p>
-  </footer>
+    if (!navigator.geolocation) {
+        status.innerHTML = "Perangkat tidak didukung";
+        return;
+    }
+
+    status.innerHTML = "Memproses...";
+    navigator.geolocation.getCurrentPosition(
+        (pos) => {
+            document.getElementById("lat").innerHTML = pos.coords.latitude;
+            document.getElementById("lon").innerHTML = pos.coords.longitude;
+
+            status.innerHTML = "Berhasil ✔️";
+
+        },
+        () => {
+            status.innerHTML = "Gagal memproses";
+        }
+    );
+}
+</script>
 
 </body>
 </html>
